@@ -1,0 +1,162 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #141414; /* Cor de fundo geral */
+}
+
+/* Menu superior */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #141414;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav__logo {
+    height: 40px;
+}
+
+.nav__menu a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav__menu a:hover {
+    text-decoration: underline;
+}
+
+.nav__avatar {
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Fazz banener ocupar toda a altura da tela */
+    background-image: url('images/banner.jpg'); /* Substitua com o caminho da sua imagem de banner */
+    background-size: cover; /* Ajusta a imagem para cobrir o banner */
+    background-position: center; /* Centraliza a imagem */
+}
+
+.banner__contents {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: white;
+    z-index: 1;
+}
+
+.banner__title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.banner__buttons {
+    margin-top: 20px;
+}
+
+.banner__button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #e50914; /* Cor do botão como o da Netflix */
+    color: white;
+    border-radius: 5px;
+}
+
+.banner__button:hover {
+    background-color: #b20710; /* Cor de hover para os botões */
+}
+
+.banner__desc {
+    font-size: 1.2rem;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.banner--fadeBottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+/* Seções gerais */
+.row {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.row h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.row__posters {
+    display: flex;
+    overflow-x: scroll;
+    padding: 0; /* Remover o espaçamento interno */
+}
+
+.row__poster-container {
+    position: relative;
+    margin-right: 0; /* Remover o espaçamento entre os containers */
+}
+
+.row__poster {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 450ms;
+}
+
+.row__poster:hover {
+    transform: scale(1.08);
+}
+
+.row__posterLarge {
+    width: 250px;
+    height: 375px;
+}
+
+.row__rating {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #141414;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
